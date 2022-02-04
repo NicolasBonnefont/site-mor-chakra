@@ -1,8 +1,17 @@
-import { Flex, Heading, Stack, Text } from '@chakra-ui/react';
+import { Button, Flex, Heading, Stack, Text } from '@chakra-ui/react';
 import { Controls, Player } from '@lottiefiles/react-lottie-player';
 import Image from 'next/image';
 import Slider from "react-slick";
-import logo from '../../../assets/logo-teste.png';
+import almanara from '../../../assets/empresa/almanara.png';
+import amortemp from '../../../assets/empresa/amortemp.jpg';
+import autoferr from '../../../assets/empresa/autoferr.png';
+import biomedical from '../../../assets/empresa/biomedical.png';
+import brasmeck from '../../../assets/empresa/brasmeck.png';
+import especifer from '../../../assets/empresa/especifer.jpg';
+import galva from '../../../assets/empresa/galva.png';
+import mikropar from '../../../assets/empresa/mikropar.png';
+import novatempera from '../../../assets/empresa/novatempera.png';
+import uniao from '../../../assets/empresa/uniao.png';
 
 const settings = {
   dots: false,
@@ -38,80 +47,26 @@ function PrimeiraSessao() {
         type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
       />
-      <Stack w='580px' color='white'>
+      <Flex w='580px' color='white' direction='column'>
         <Heading fontWeight={'bold'}>
           Há mais de 27 anos ajudando nossos clientes a melhorarem
           seus resultados.
         </Heading>
 
-        <Text>
+        <Text mt='4'>
           Com nossos Softwares você encontra as informações precisas para a
           gestão de sua Empresa.
         </Text>
 
-        <Slider
-          dots={false}
-          {...settings}
-        >
-          <Image
-            src={logo}
-            alt="MOR INFORMATICA"
-            quality={100}
-            width={80}
-            height={80}
-
-          />
-          <Image
-            src={logo}
-            alt="MOR INFORMATICA"
-            quality={100}
-            width={80}
-            height={80}
-
-          />
-          <Image
-            src={logo}
-            alt="MOR INFORMATICA"
-            quality={100}
-            width={80}
-            height={80}
-
-          />
-          <Image
-            src={logo}
-            alt="MOR INFORMATICA"
-            quality={100}
-            width={80}
-            height={80}
-
-          />
-          <Image
-            src={logo}
-            alt="MOR INFORMATICA"
-            quality={100}
-            width={80}
-            height={80}
-
-          />
-          <Image
-            src={logo}
-            alt="MOR INFORMATICA"
-            quality={100}
-            width={80}
-            height={80}
-
-          />
-          <Image
-            src={logo}
-            alt="MOR INFORMATICA"
-            quality={100}
-            width={80}
-            height={80}
-
-          />
-
-        </Slider>
-      </Stack>
+        <Button
+          h='16'
+          mt='14'
+          variant='solid'
+          color='#Fff'
+          fontWeight='bold'
+          colorScheme='blue'
+        >Solicite nosso contato</Button>
+      </Flex>
 
       <Player
         autoplay

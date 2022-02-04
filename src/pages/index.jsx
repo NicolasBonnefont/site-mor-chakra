@@ -17,7 +17,6 @@ function Pages() {
       <MenuSuperior />
 
       <PrimeiraSessao />
-      <SegundaSessao/>
 
     </Flex>
   );
