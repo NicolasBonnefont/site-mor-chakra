@@ -1,6 +1,5 @@
 import { Flex, Heading } from "@chakra-ui/react";
 
-
 function SegundaSessao() {
   return (
     <Flex
@@ -9,8 +8,6 @@ function SegundaSessao() {
       color='#000'
       bg='gray.900'
     >
-
-
 
     </Flex>
   )
