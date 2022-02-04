@@ -1,4 +1,4 @@
-import { Box, Divider, Flex, Heading, Link, Stack } from '@chakra-ui/react';
+import { Box, Link, Stack } from '@chakra-ui/react';
 import Image from 'next/image';
 import React from 'react';
 import logo from '../../assets/logo-teste.png';

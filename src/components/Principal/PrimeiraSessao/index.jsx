@@ -1,31 +1,5 @@
 import { Button, Flex, Heading, Stack, Text } from '@chakra-ui/react';
 import { Controls, Player } from '@lottiefiles/react-lottie-player';
-import Image from 'next/image';
-import Slider from "react-slick";
-import almanara from '../../../assets/empresa/almanara.png';
-import amortemp from '../../../assets/empresa/amortemp.jpg';
-import autoferr from '../../../assets/empresa/autoferr.png';
-import biomedical from '../../../assets/empresa/biomedical.png';
-import brasmeck from '../../../assets/empresa/brasmeck.png';
-import especifer from '../../../assets/empresa/especifer.jpg';
-import galva from '../../../assets/empresa/galva.png';
-import mikropar from '../../../assets/empresa/mikropar.png';
-import novatempera from '../../../assets/empresa/novatempera.png';
-import uniao from '../../../assets/empresa/uniao.png';
-
-const settings = {
-  dots: false,
-  infinite: true,
-  slidesToShow: 5,
-  slidesToScroll: 1,
-  autoplay: true,
-  speed: 5000,
-  autoplaySpeed: 1000,
-  cssEase: "linear",
-  arrows: false,
-  appendDots: false
-};
-
 
 function PrimeiraSessao() {
   return (
