@@ -1,9 +1,11 @@
-import { Flex } from '@chakra-ui/react';
-import React from 'react';
+import { useEffect } from 'react';
+import { Flex, } from '@chakra-ui/react';
 import MenuSuperior from '../components/MenuSuperior';
 import PrimeiraSessao from '../components/Principal/PrimeiraSessao';
+import Head from 'next/head'
 
 function Pages() {
+
   return (
     <Flex
       bg='#fff'

@@ -24,7 +24,15 @@ function MenuSuperior() {
       paddingRight='24'
       color='white'
     >
-
+      <Head>
+        <title>MOR INFO</title>
+        <meta charSet="utf-8" />
+        <meta lang='pt-br' />
+        <meta name="description" content="Empresa de Software House " />
+        <meta name="keywords" content="NFE, NOTAFISCAL, NOTA FISCAL, ERP, BI" />
+        <meta name="author" content="MOR INFO" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       <Box mr='auto' cursor={'pointer'} >
         <Image
           src={logo}
@@ -34,12 +42,11 @@ function MenuSuperior() {
           height={80}
         />
       </Box>
-
-      <Solucoes />
+      {/*   <Solucoes />
 
       <Link >Empresa</Link>
       <Link >Videos</Link>
-      <Link >Contato</Link>
+      <Link >Contato</Link> */}
 
       <FalarComAgente />
 
