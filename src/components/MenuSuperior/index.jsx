@@ -1,9 +1,9 @@
-import { Box, Link, Stack } from '@chakra-ui/react';
+import { Box, Stack } from '@chakra-ui/react';
 import Image from 'next/image';
 import React from 'react';
 import logo from '../../assets/logo-teste.png';
-import Solucoes from '../MenuSuperior/Menu/Solucoes';
 import FalarComAgente from './Menu/FalarComAgente';
+import Head from 'next/head'
 
 function MenuSuperior() {
   return (
