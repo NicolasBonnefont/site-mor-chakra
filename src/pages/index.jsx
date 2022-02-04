@@ -2,6 +2,7 @@ import { Divider, Flex } from '@chakra-ui/react';
 import React from 'react';
 import MenuSuperior from '../components/MenuSuperior';
 import PrimeiraSessao from '../components/Principal/PrimeiraSessao';
+import SegundaSessao from '../components/Principal/SegundaSessao';
 
 function Pages() {
   return (
@@ -16,6 +17,7 @@ function Pages() {
       <MenuSuperior />
 
       <PrimeiraSessao />
+      <SegundaSessao/>
 
     </Flex>
   );
