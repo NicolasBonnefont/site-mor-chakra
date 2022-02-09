@@ -1,5 +1,6 @@
 import { Button, Flex, Heading, Text } from '@chakra-ui/react';
 import { Controls, Player } from '@lottiefiles/react-lottie-player';
+import JsonLottie from '../../../assets/principal/primeiraSessao/json.json'
 
 function PrimeiraSessao() {
   return (
@@ -34,7 +35,7 @@ function PrimeiraSessao() {
       <Player
         autoplay
         loop
-        src="https://assets6.lottiefiles.com/packages/lf20_hadzves0.json"
+        src={JsonLottie}
         style={{ height: '380px', width: '380px' }}
       >
         <Controls visible={false} />
