@@ -63,14 +63,17 @@ function Form() {
         <Input
           placeholder='Nome'
           h='60px'
+          required
           onChange={(event) => setNome(event.target.value)}
         />
         <Input
           placeholder='E-mail'
           h='60px'
+          required
           onChange={(event) => setEmail(event.target.value)}
         />
         <Textarea
+          required
           placeholder='Observação'
           onChange={(event) => setMensagem(event.target.value)}
         />

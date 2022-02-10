@@ -5,7 +5,7 @@ export default function (req, res) {
   let transporter = nodemailer.createTransport({
     host: process.env.MAIL_HOST,
     port: process.env.MAIL_PORT,
-    secure: Boolean(process.env.MAIL_SECURE),
+    secure: JSON.parse(process.env.MAIL_SECURE),
     auth: {
       user: String(process.env.MAIL_USER),
       pass: String(process.env.MAIL_PASS)
@@ -13,7 +13,7 @@ export default function (req, res) {
   })
 
   let mailOptions = {
-    from: 'nicolas@morinfo.com.br',
+    from: String(process.env.MAIL_HOST),
     to: req.body.email,
     subject: "TESTE SITE CHAKRA MOR INFO",
     text: req.body.mensagem,
@@ -28,11 +28,19 @@ export default function (req, res) {
 
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
-      
-      return res.status(400).send({error})
+
+      return res.status(400).send(error, {
+        host: process.env.MAIL_HOST,
+        port: process.env.MAIL_PORT,
+        secure: Boolean(process.env.MAIL_SECURE),
+        auth: {
+          user: String(process.env.MAIL_USER),
+          pass: String(process.env.MAIL_PASS)
+        }
+      })
     }
-   
-    return  res.status(200).send({info})
+
+    return res.status(200).send({ info })
   })
 }
 
