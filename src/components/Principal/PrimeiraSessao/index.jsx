@@ -1,17 +1,25 @@
-import { Button, Flex, Heading, Text } from '@chakra-ui/react';
+import { Box, Button, Flex, Heading, Stack, Text } from '@chakra-ui/react';
 import { Controls, Player } from '@lottiefiles/react-lottie-player';
 import JsonLottie from '../../../assets/principal/primeiraSessao/json.json'
-
 function PrimeiraSessao() {
   return (
     <Flex
-      direction='row'
-      justifyContent={'space-evenly'}
-      alignItems={'center'}
+      direction={['column', 'column', 'row']}
+      w='100%'
       h='100vh'
-      bg='gray.800'
+      pl='12%'
+      pr='12%'
+      alignItems='center'
+      justifyContent={['center', 'center', 'space-evenly']}
+      bg='gray.700'
     >
-      <Flex w='580px' color='white' direction='column'>
+      <Flex
+        minW='250px'
+        w={['100%', '100%', '40%']}
+        color='white'
+        direction='column'
+
+      >
         <Heading fontWeight={'bold'}>
           Há mais de 27 anos ajudando nossos clientes a melhorarem
           seus resultados.
@@ -29,17 +37,24 @@ function PrimeiraSessao() {
           color='#Fff'
           fontWeight='bold'
           colorScheme='blue'
-        >Solicite nosso contato</Button>
+        >
+          SOLICITE NOSSO CONTATO
+        </Button>
       </Flex>
 
-      <Player
-        autoplay
-        loop
-        src={JsonLottie}
-        style={{ height: '380px', width: '380px' }}
+      <Box
+        display={['none', 'none', 'block']}
+        w='50%'
       >
-        <Controls visible={false} />
-      </Player>
+        <Player
+          autoplay
+          loop
+          src={JsonLottie}
+        >
+          <Controls visible={false} />
+        </Player>
+      </Box>
+
 
     </Flex>
   );

@@ -7,11 +7,11 @@ function Pages() {
 
   return (
     <Flex
-      bg='#fff'
       w='100%'
       minH='100vh'
       h='auto'
       direction='column'
+      
     >
 
       <MenuSuperior />

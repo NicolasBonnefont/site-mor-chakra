@@ -8,10 +8,10 @@ import {
 } from '@chakra-ui/react'
 import { ChevronDownIcon } from '@chakra-ui/icons';
 
-function Solucoes() {
+function Solucoes({textColor}) {
   return (
     <Menu>
-      <MenuButton color='white' as={Link} rightIcon={<ChevronDownIcon />}>
+      <MenuButton color={textColor}as={Link} rightIcon={<ChevronDownIcon />}>
         Soluções
       </MenuButton>
       <MenuList color='gray.700'>

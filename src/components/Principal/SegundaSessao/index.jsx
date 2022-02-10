@@ -1,22 +1,46 @@
-import { Box, Flex, Heading } from "@chakra-ui/react";
+import { Box, Flex, Heading, Stack, Text } from "@chakra-ui/react";
 import Image from "next/image";
-import fundo from '../../../assets/principal/segundasessao/fundo.jpg'
+import Financeiro from '../../../assets/principal/segundasessao/financeiro.png';
+import NFE from '../../../assets/principal/segundasessao/nfe.png';
+import Compras from '../../../assets/principal/segundasessao/compras.svg';
+import Cards from "./Cards";
 
 function SegundaSessao() {
   return (
 
     <Flex
+      direction={['column', 'column', 'row']}
       w='100%'
       h='100vh'
-      bg='#5f0606c1'
-    // direction='column'
+      pl='12%'
+      pr='12%'
+      //alignItems='center'
+      //justifyContent='center'
+    //bg='gray.50'
     >
+      <Flex
+        w='100%'        
+        flexWrap='wrap'
+        justifyContent='center'
+        align='center'
+      >
+        <Cards
+          titulo={'NF-e'}
+          subTitulo='Emissão de Nota Fiscal Eletrônica descomplicado.'
+          imagem={NFE}
+        />
+        <Cards
+          titulo='Financeiro'
+          subTitulo='Controle de contas e relatórios.'
+          imagem={Financeiro}
+        />
+        <Cards
+          titulo='Compras'
+          subTitulo='Gerenciamento de compras e vendas.'
+          imagem={Compras}
+        />
 
-      <Image
-        src={fundo}
-        alt='fundo'
-        
-      />
+      </Flex>
 
 
     </Flex>
