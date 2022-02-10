@@ -1,7 +1,12 @@
 import { Box, Button, Flex, Heading, Stack, Text } from '@chakra-ui/react';
 import { Controls, Player } from '@lottiefiles/react-lottie-player';
+import { useRouter } from 'next/router';
 import JsonLottie from '../../../assets/principal/primeiraSessao/json.json'
+
 function PrimeiraSessao() {
+
+  const router = useRouter();
+  
   return (
     <Flex
       direction={['column', 'column', 'row']}
@@ -21,7 +26,7 @@ function PrimeiraSessao() {
 
       >
         <Heading fontWeight={'bold'}>
-          Há mais de 27 anos ajudando nossos clientes a melhorarem
+          Há mais de <Heading as='ins'><Heading as='cite'>27 anos</Heading></Heading> ajudando nossos clientes a melhorarem
           seus resultados.
         </Heading>
 
@@ -37,6 +42,7 @@ function PrimeiraSessao() {
           color='#Fff'
           fontWeight='bold'
           colorScheme='blue'
+          onClick={() => router.push('/contato')}
         >
           SOLICITE NOSSO CONTATO
         </Button>

@@ -5,18 +5,35 @@ import logo from '../../assets/logo-teste.png';
 import FalarComAgente from './Menu/FalarComAgente';
 import Solucoes from '../../components/MenuSuperior/Menu/Solucoes';
 import Head from 'next/head'
+import { useRouter } from 'next/router';
 
 function MenuSuperior() {
   const [background, setBakcground] = useState('gray.600');
   const [textColor, setTextColor] = useState('white');
+  const router = useRouter()
 
   function posicaoTela() {
+
+    console.log(location.pathname)
     if (document.documentElement.scrollTop > 860) {
       setBakcground('white');
       setTextColor('#000');
     } else {
       setBakcground('gray.700');
       setTextColor('white');
+    }
+
+    if (location.pathname == '/contato') {
+      setBakcground('#ffffff');
+      setTextColor('gray.800');
+    }
+  }
+
+  function clickLogo() {
+    if (location.pathname == '/') {
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    } else {
+      router.push('/')
     }
   }
 
@@ -53,9 +70,9 @@ function MenuSuperior() {
       </Head>
       <Box
         mr='auto' cursor={'pointer'}
-        onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}
+        onClick={clickLogo}
       >
-        <Image  
+        <Image
           src={logo}
           alt="MOR INFORMATICA"
           width={80}
@@ -67,7 +84,7 @@ function MenuSuperior() {
         <Solucoes textColor={textColor} />
         <Link >Empresa</Link>
         <Link >Videos</Link>
-        <Link >Contato</Link>
+        <Link onClick={() => router.push('/contato')} >Contato</Link>
         <FalarComAgente />
       </Stack>
 

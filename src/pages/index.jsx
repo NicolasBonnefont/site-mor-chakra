@@ -11,13 +11,11 @@ function Pages() {
       minH='100vh'
       h='auto'
       direction='column'
-      
     >
 
       <MenuSuperior />
-
       <PrimeiraSessao />
-      <SegundaSessao/>
+      <SegundaSessao />
 
     </Flex>
   );
