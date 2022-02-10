@@ -12,8 +12,8 @@ function PrimeiraSessao() {
       direction={['column', 'column', 'row']}
       w='100%'
       h='100vh'
-      pl='12%'
-      pr='12%'
+      pl='10%'
+      pr='10%'
       alignItems='center'
       justifyContent={['center', 'center', 'space-evenly']}
       bg='gray.700'

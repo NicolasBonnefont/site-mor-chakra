@@ -28,7 +28,6 @@ export default function (req, res) {
 
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
-
       return res.status(400).send(error, {
         host: process.env.MAIL_HOST,
         port: process.env.MAIL_PORT,
@@ -39,7 +38,6 @@ export default function (req, res) {
         }
       })
     }
-
     return res.status(200).send({ info })
   })
 }

@@ -24,8 +24,8 @@ function MenuSuperior() {
     }
 
     if (location.pathname == '/contato') {
-      setBakcground('#ffffff');
-      setTextColor('gray.800');
+      setBakcground('#gray.700');
+      setTextColor('white');
     }
   }
 
@@ -49,8 +49,8 @@ function MenuSuperior() {
       shadow={'xl'}
       h='100px'
       w='100%'
-      paddingLeft='12%'
-      paddingRight='12%'
+      paddingLeft='10%'
+      paddingRight='10%'
       alignItems='center'
       justifyContent='space-between'
       bg={background}

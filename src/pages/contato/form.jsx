@@ -1,4 +1,5 @@
-import { Button, Flex, Heading, Input, Stack, Text, Textarea } from '@chakra-ui/react';
+import { ArrowBackIcon } from '@chakra-ui/icons';
+import { Button, Flex, Heading, Input, Link, Stack, Text, Textarea } from '@chakra-ui/react';
 import { useToast } from '@chakra-ui/react'
 import axios from 'axios';
 import { useRouter } from 'next/router';
@@ -54,25 +55,29 @@ function Form() {
       direction='column'
       onSubmit={() => EnviaMensagem()}
     >
-      <Stack mb='8'>
+
+      <Stack mb='8' color='white'>
         <Heading>Entre em contato conosco !</Heading>
         <Text> Informe seus dados abaixo e iremos retornar 😉 </Text>
       </Stack>
 
-      <Stack>
+      <Stack color= 'white'>
         <Input
+        bg='white'
           placeholder='Nome'
           h='60px'
           required
           onChange={(event) => setNome(event.target.value)}
         />
         <Input
+         bg='white'
           placeholder='E-mail'
           h='60px'
           required
           onChange={(event) => setEmail(event.target.value)}
         />
         <Textarea
+         bg='white'
           required
           placeholder='Observação'
           onChange={(event) => setMensagem(event.target.value)}
@@ -84,14 +89,22 @@ function Form() {
         mt='2'
         h='60px'
         color='#fff'
-        _hover={{ bg: '#030236f8' }}
-        bg='#060368'
+        _hover={{ bg: 'green.700' }}
+        bg='green.600'
         color="#fff"
         type='submit'
         isLoading={loading}
       >
         ENVIAR
       </Button>
+
+      <Link color='white' mt='6' onClick={()=> router.push('/')}>
+        <Stack direction='row' alignItems='center'>
+          <ArrowBackIcon/>
+          <Text>voltar</Text>
+        </Stack>
+      </Link>
+      
     </Flex>
   )
 }

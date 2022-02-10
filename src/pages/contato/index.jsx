@@ -9,6 +9,7 @@ function Contato() {
       w='100%'
       h='100vh'
       direction='column'
+      bg='gray.700'
     >
 
       <MenuSuperior />
@@ -16,8 +17,8 @@ function Contato() {
       <Stack
         w='100%'
         h='100vh'
-        paddingLeft='12%'
-        paddingRight='12%'
+        paddingLeft='10%'
+        paddingRight='10%'
         direction='row'
       >
 
@@ -27,12 +28,14 @@ function Contato() {
           alignItems='center'
           justifyContent='center'
         >
+
           <Form />
+
         </Flex>
 
         <Flex
           h='100vh'
-          flex='1.5'
+          flex={['0', '0', '0 ', '1', '1.2', '1.5']}
           alignItems='center'
           justifyContent='center'
         >
