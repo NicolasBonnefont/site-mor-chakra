@@ -61,23 +61,26 @@ function Form() {
         <Text> Informe seus dados abaixo e iremos retornar 😉 </Text>
       </Stack>
 
-      <Stack color= 'white'>
+      <Stack color='white'>
         <Input
-        bg='white'
+          color='#000'
+          bg='white'
           placeholder='Nome'
           h='60px'
           required
           onChange={(event) => setNome(event.target.value)}
         />
         <Input
-         bg='white'
+          color='#000'
+          bg='white'
           placeholder='E-mail'
           h='60px'
           required
           onChange={(event) => setEmail(event.target.value)}
         />
         <Textarea
-         bg='white'
+          color='#000'
+          bg='white'
           required
           placeholder='Observação'
           onChange={(event) => setMensagem(event.target.value)}
@@ -98,13 +101,13 @@ function Form() {
         ENVIAR
       </Button>
 
-      <Link color='white' mt='6' onClick={()=> router.push('/')}>
+      <Link color='white' mt='6' onClick={() => router.push('/')}>
         <Stack direction='row' alignItems='center'>
-          <ArrowBackIcon/>
+          <ArrowBackIcon />
           <Text>voltar</Text>
         </Stack>
       </Link>
-      
+
     </Flex>
   )
 }
